@@ -1,4 +1,4 @@
-Certainly! Here's a simplified README for a Video Processing project:
+ 
 
 ---
 
