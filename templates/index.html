@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Video Processing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio (change this if needed) */
+            padding-top: 25px;
+            height: 0;
+        }
+
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .upload-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .upload-button:hover {
+            background-color: #0056b3;
+        }
+
+        #processed-video {
+            width: 100%;
+            max-width: 640px;
+            height: auto;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Video Processing</h1>
+    <form method="POST" action="{{ url_for('upload_file') }}" enctype="multipart/form-data">
+        <label for="file" class="upload-button">Choose a Video</label>
+        <input type="file" name="file" id="file" accept=".mp4">
+        <input type="submit" value="Upload and Process" class="upload-button">
+    </form>
+    <img src="{{ url_for('video') }}" id="processed-video" autoplay="true">
+    <script>
+        const fileInput = document.getElementById("file");
+        const processedVideo = document.getElementById("processed-video");
+
+        fileInput.addEventListener("change", function () {
+            if (fileInput.files.length > 0) {
+                processedVideo.style.display = "block";
+            }
+        });
+    </script>
+</body>
+
+</html>
