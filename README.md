@@ -34,6 +34,4 @@ Special thanks to all contributors and libraries that have contributed to the de
 
 Questions or ideas? Reach out to devallabhaskarganesh@gmail.com.
 
----
 
-Feel free to customize this README according to your specific video processing project, adding more sections or information that aligns with the goals and features of your repository!
