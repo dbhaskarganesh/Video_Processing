@@ -25,9 +25,6 @@ Discover the project, install necessary tools, and explore examples! Find detail
 
 Eager to contribute? Check out our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to get involved.
 
-📜 **License**
-
-This project operates under [License Name/Type]. Refer to [LICENSE](LICENSE) for specifics.
 
 🙌 **Acknowledgments**
 
